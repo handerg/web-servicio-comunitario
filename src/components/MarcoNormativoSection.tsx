@@ -7,8 +7,8 @@ import {
 } from './ui/accordion';
 import { Button } from './ui/button';
 
-const REGLAMENTO_HREF = "/assets/reglamento-interno-sc.pdf";
-const LINEAMIENTOS_HREF = "/assets/lineamientos-generales-sc.pdf";
+const REGLAMENTO_HREF = `${import.meta.env.BASE_URL}assets/reglamento-interno-sc.pdf`;
+const LINEAMIENTOS_HREF = `${import.meta.env.BASE_URL}assets/lineamientos-generales-sc.pdf`;
 const REGLAMENTO_DOWNLOAD_NAME = "reglamento-interno-sc.pdf";
 const LINEAMIENTOS_DOWNLOAD_NAME = "lineamientos-generales-sc.pdf";
 
@@ -71,17 +71,17 @@ export function MarcoNormativoSection() {
                   Coordinación de Servicio Comunitario antes de su ejecución.
                 </p>
                 <div className="mt-6 pt-6 border-t border-border">
-                  <a 
-                    href={REGLAMENTO_HREF} 
+                  <a
+                    href={REGLAMENTO_HREF}
                     download={REGLAMENTO_DOWNLOAD_NAME}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full block" 
+                    className="w-full block"
                   >
                     <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                    <Download className="mr-2 h-5 w-5" />
-                    Descargar Reglamento Completo (PDF)
-                  </Button>
+                      <Download className="mr-2 h-5 w-5" />
+                      Descargar Reglamento Completo (PDF)
+                    </Button>
                   </a>
                 </div>
               </AccordionContent>
@@ -104,7 +104,7 @@ export function MarcoNormativoSection() {
                   <li>Aplicar los conocimientos académicos en contextos reales</li>
                   <li>Fortalecer los valores de responsabilidad social y ciudadanía</li>
                 </ul>
-                
+
                 <h4 className="text-primary mt-6">2. Proceso de Inscripción</h4>
                 <ol className="list-decimal pl-6 space-y-2">
                   <li>Verificar haber aprobado el 50% de la carga académica</li>
@@ -130,17 +130,17 @@ export function MarcoNormativoSection() {
                   <li>Carta de culminación de la comunidad beneficiada</li>
                 </ul>
                 <div className="mt-6 pt-6 border-t border-border">
-                    <a 
-                    href={LINEAMIENTOS_HREF} 
+                  <a
+                    href={LINEAMIENTOS_HREF}
                     download={LINEAMIENTOS_DOWNLOAD_NAME}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-full block"
-                    >
+                  >
                     <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                    <Download className="mr-2 h-5 w-5" />
-                    Descargar Lineamientos Generales (PDF)
-                  </Button>
+                      <Download className="mr-2 h-5 w-5" />
+                      Descargar Lineamientos Generales (PDF)
+                    </Button>
                   </a>
                 </div>
               </AccordionContent>

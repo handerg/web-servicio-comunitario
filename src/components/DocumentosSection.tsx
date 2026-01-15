@@ -13,12 +13,12 @@ declare global {
 }
 
 interface Documento {
-    icon: LucideIcon;
-    title: string;
-    description: string;
-    color: string;
-    hoverColor: string;
-    href: string; // Ruta web pública
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  color: string;
+  hoverColor: string;
+  href: string; // Ruta web pública
 }
 
 
@@ -30,7 +30,7 @@ const documentos: Documento[] = [
     color: 'bg-blue-50 text-blue-600',
     hoverColor: 'hover:bg-blue-100',
     // RUTA WEB CORREGIDA.
-    href: "/assets/guia-informe-final.docx" 
+    href: `${import.meta.env.BASE_URL}assets/guia-informe-final.docx`
   },
   {
     icon: Table,
@@ -39,7 +39,7 @@ const documentos: Documento[] = [
     color: 'bg-green-50 text-green-600',
     hoverColor: 'hover:bg-green-100',
     // RUTA WEB CORREGIDA.
-    href: "/assets/planilla-registro-horas.docx"
+    href: `${import.meta.env.BASE_URL}assets/planilla-registro-horas.docx`
   }
 ];
 
@@ -68,20 +68,20 @@ export function DocumentosSection() {
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {doc.description}
                   </p>
-                  <a 
+                  <a
                     href={doc.href}         // 1. Usa la ruta real del documento
                     download                // 2. FUERZA la descarga en lugar de navegar
                     target="_blank"         // 3. Abre el enlace en una nueva pestaña
                     rel="noopener noreferrer"
                     className="w-full block" // 4. Asegura que el enlace ocupe todo el ancho
                   >
-                    <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white group"
-                    size="lg"
-                  >
-                    <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                    Descargar Documento
-                  </Button>
+                    <Button
+                      className="w-full bg-primary hover:bg-primary/90 text-white group"
+                      size="lg"
+                    >
+                      <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                      Descargar Documento
+                    </Button>
                   </a>
                 </div>
               </CardContent>
